@@ -63,6 +63,19 @@ public class Controllers {
 
 		return new ModelAndView("list", "user", user);
 	}
+	
+	@PostMapping("/list/{id}")
+	public ModelAndView searchList(@SessionAttribute(name = "user", required = false) User user,
+			@RequestParam("search") String search) {
+
+		List<Task> tasks = new ArrayList<>();
+
+		Long id = user.getId();
+
+		tasks = taskRepo.findByUsersIdAndDescriptionContainsIgnoreCase(id, search);
+
+		return new ModelAndView("sorted", "tasks", tasks);
+	}
 
 	@RequestMapping("/date")
 	public ModelAndView date(@SessionAttribute(name = "user", required = false) User user) {
