@@ -41,9 +41,10 @@
 
 		</table>
 
-		<input class="btn link" type="submit" value="Submit" />
+		<input class="btn btn-primary" type="submit" value="Submit" />
+		<a class="btn btn-primary" href="/"> Home </a>
 	</form>
-<a class="btn link" href="/"> Home </a>
+
 </div>
 
 </body>

@@ -32,7 +32,8 @@
 		<ul class="navbar-nav ml-auto">
 
 			<c:if test="${username == 1}">
-				<li class="nav-item"><a href="/admin" class="nav-link">Admin Tasks</a></li>
+				<li class="nav-item"><a href="/admin" class="nav-link">Admin
+						Tasks</a></li>
 			</c:if>
 			<li class="nav-item"><a href="/date" class="nav-link">Sort
 					by Date</a></li>
@@ -48,11 +49,13 @@
 	</nav>
 
 	<main>
-	
-	<c:if test="${username == 1}">
-				<h5>Welcome Madame CEO</h5>
-			</c:if>
+		<c:if test="${username == 1}">
+			<section class="container">
 
+				<h5>Welcome Madame CEO</h5>
+
+			</section>
+		</c:if>
 
 
 
